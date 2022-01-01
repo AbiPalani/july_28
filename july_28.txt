@@ -1,0 +1,148 @@
+MOVIE CLASS
+
+class Movie {
+    constructor(title,studio,rating="PG") {  
+      this.title = ["GodzilavsKong","Nobody","blackWidow","JUMANJI","HOMA ALONE","WILLOW"];
+      this.studio = ["Legendary Pictures","Universal Pictures","MARVEL STUDIO","Columbia Pictures","Hughes Entertainment","Lucasfilm Ltd. Imagine Entertainment"];
+      this.rating = ["PG-13","R","PG-13","PG","PG","PG"];
+    }
+
+    getFilms(){
+      for(var i=0;i<this.title.length;i++){
+        console.log("Movie title:"+this.title[i]+"  "+"Studio Name:"+this.studio[i]+"  "+"Rating:"+this.rating[i]);
+      } 
+    }
+
+    getPG(title){
+      var arr=[];
+      for(var i=0;i<this.rating.length;i++){
+        if(this.rating[i] === "PG"){
+          arr.push(this.title[i]);
+        }
+      }
+    console.log(arr);
+    }
+}
+
+var PGFilm = new Movie();
+PGFilm.getPG();
+
+var films = new Movie();
+films.getFilms();
+
+var film1 = new  Movie();
+film1.title="Casino Royale";
+film1.studio="Eon Productions";
+film1.rating="PG­13";
+console.log(film1);
+
+--------------------------------------------------------------------------------------------------------
+
+CIRCLE CLASS
+
+class Circle{
+  constructor(radius,color){
+    this.radius;
+    this.color;
+  }
+  getRadius(){
+    console.log(this.radius);
+  }
+  setRadius(radius){
+    this.radius=radius;
+  }
+  getArea(){
+    console.log("Area of the circle:"+ 3.14*this.radius*this.radius);
+  }
+  getCircumference(){
+    console.log("Circumference of the circle:"+2*3.14*this.radius)
+  }
+}
+
+var circleArea = new Circle();
+circleArea.setRadius(4);
+circleArea.getRadius();
+circleArea.getArea();
+
+var circleCircum = new Circle();
+circleCircum.setRadius(2);
+circleCircum.getRadius();
+circleCircum.getCircumference();
+
+----------------------------------------------------------------------------------------------------------
+
+class person
+{
+    constructor(name)
+    {
+        this.name=name;
+        console.log(name);
+    }
+  contact()
+  {
+       var obj1={
+          "Mobile":9876543210,
+          "Address":"Ramanathapuram"
+      }
+      console.log(obj1);
+  }
+  education()
+  {
+      var obj2={
+          "degree":"M.E.,CSE",
+          "class":"First class"
+      }
+  console.log(obj2);
+  }
+  other()
+  {
+      var obj3={
+          "Languages":["Tamil","English"],
+          "Hobbies":["Painting","craft Work"]
+      }
+  console.log(obj3);
+  }
+
+}
+var object= new person("Abinaya");
+object.contact();
+object.education();
+object.other();
+
+----------------------------------------------------------------------------------------------------------------------
+
+UBER PRICE
+
+class Uber{
+  constructor(kilometer,distance) {
+  this.distance;
+  this.totalCost;
+  }
+
+  setPrice(distance){
+    this.distance=distance;
+    
+    if (this.distance <= 100) {
+      this.totalCost = 100;
+    }
+    else if (this.distance > 100 && this.distance <= 500) {
+      this.totalCost = 250;
+    }
+    else if (this.distance > 500) {
+      this.totalCost = 1000;
+    }
+
+  console.log(this.totalCost);
+}
+
+  getPrice(){
+    console.log("The cost of your ride is:"+ this.totalCost);
+  }
+
+}
+
+var cost = new Uber();
+cost.setPrice(500);
+
+
+------------------------------------------------------------------------------------------------------------------
